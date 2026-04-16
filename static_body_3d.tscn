@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cnijhiekqc0dk"]
+
+[ext_resource type="Texture2D" uid="uid://bt04ggd560upt" path="res://icon.svg" id="1_wago0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3wdy0"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_wago0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m45xy"]
+albedo_texture = ExtResource("1_wago0")
+disable_receive_shadows = true
+billboard_mode = 1
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=545040967]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1371264983]
+transform = Transform3D(0.615, 0, 0, 0, 0.615, 0, 0, 0, 0.016, 0, 0, 0)
+shape = SubResource("BoxShape3D_3wdy0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1693243061]
+mesh = SubResource("QuadMesh_wago0")
+surface_material_override/0 = SubResource("StandardMaterial3D_m45xy")

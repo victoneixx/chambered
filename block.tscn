@@ -1,8 +1,16 @@
 [gd_scene format=3 uid="uid://b4cpo2swcsex6"]
 
+[ext_resource type="Texture2D" uid="uid://ndsn7nyb4g43" path="res://bricks.png" id="1_im0tn"]
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_qncar"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_im0tn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xfwl5"]
+albedo_texture = ExtResource("1_im0tn")
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 0
 
 [node name="Block" type="StaticBody3D" unique_id=986360986]
 
@@ -11,3 +19,4 @@ shape = SubResource("BoxShape3D_qncar")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1666683983]
 mesh = SubResource("BoxMesh_im0tn")
+surface_material_override/0 = SubResource("StandardMaterial3D_xfwl5")

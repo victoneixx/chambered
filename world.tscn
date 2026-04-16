@@ -3,17 +3,48 @@
 [ext_resource type="PackedScene" uid="uid://bm7gf65hy4ic1" path="res://ground.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://b547ccu02qbom" path="res://player.tscn" id="2_fj7yv"]
 [ext_resource type="PackedScene" uid="uid://b4cpo2swcsex6" path="res://block.tscn" id="3_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://cnijhiekqc0dk" path="res://static_body_3d.tscn" id="4_aqk2v"]
+
+[sub_resource type="Environment" id="Environment_aqk2v"]
+ambient_light_source = 3
+ambient_light_energy = 16.0
 
 [node name="World" type="Node3D" unique_id=1506130069]
 
 [node name="Ground" parent="." unique_id=653278651 instance=ExtResource("1_f3sb7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 2, 0, -0.5, -3)
 
 [node name="Player" parent="." unique_id=1755081713 instance=ExtResource("2_fj7yv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5999999, 1.1, 0)
+speed = 8
+rotation_speed = 4
 
 [node name="Block" parent="." unique_id=986360986 instance=ExtResource("3_tlwt5")]
-transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 6, 0, 3.2, 0)
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 12, 0, 4.2, -3)
 
 [node name="Block2" parent="." unique_id=2388623 instance=ExtResource("3_tlwt5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 6, -2.5, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 12, -2.5, 1.7, -3.0000002)
+
+[node name="Block3" parent="." unique_id=1935806557 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(1, 0, 0, 0, 4, 0, 0, 0, 12, 2.5, 1.7, -3)
+
+[node name="Block4" parent="." unique_id=1200788149 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 1, 0, 1.7, 2.5)
+
+[node name="Block5" parent="." unique_id=399931314 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 1, 0, 1.7, -8.5)
+
+[node name="Block6" parent="." unique_id=1006913615 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -6.3)
+
+[node name="StaticBody3D" parent="." unique_id=545040967 instance=ExtResource("4_aqk2v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0.5, -6)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1733279506]
+environment = SubResource("Environment_aqk2v")
+
+[node name="Label" type="Label" parent="." unique_id=1816097799]
+offset_right = 180.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 20
+text = "Chambered Alpha 1.0.0"
