@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://02nlkgqgipjn"]
+
+[ext_resource type="PackedScene" uid="uid://bm7gf65hy4ic1" path="res://ground.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://b547ccu02qbom" path="res://player.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://b4cpo2swcsex6" path="res://block.tscn" id="3_tlwt5"]
+
+[node name="World" type="Node3D" unique_id=1506130069]
+
+[node name="Ground" parent="." unique_id=653278651 instance=ExtResource("1_f3sb7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="Player" parent="." unique_id=1755081713 instance=ExtResource("2_fj7yv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 0)
+
+[node name="Block" parent="." unique_id=986360986 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(6, 0, 0, 0, 1, 0, 0, 0, 6, 0, 3.2, 0)
+
+[node name="Block2" parent="." unique_id=2388623 instance=ExtResource("3_tlwt5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 6, -2.5, 0.5, 0)
